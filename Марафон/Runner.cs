@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Марафон
 {
-    public partial class More : Form
+    public partial class Runner : Form
     {
-        public More()
+        public Runner()
         {
             InitializeComponent();
         }
@@ -24,6 +24,13 @@ namespace Марафон
             DateTime current_time = DateTime.Now;
             time1 = initial_time - current_time;
             time.Text = time1.Days.ToString() + " дней " + time1.Hours.ToString() + " часов и " + time1.Minutes.ToString() + " минут до старта марафона!";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form1 Main = new Form1();
+            Main.Show();
+            this.Hide();
 
         }
 

@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
+
 
 namespace Марафон
 {
-    public partial class More : Form
+    public partial class Login : Form
     {
-        public More()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 Main = new Form1();
+            Main.Show();
+            this.Hide();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -27,7 +38,7 @@ namespace Марафон
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             Form1 Main = new Form1();
             Main.Show();
