@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Марафон
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -43,6 +43,13 @@ namespace Марафон
             More.Show();
             this.Hide();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Login Login = new Login();
+            Login.Show();
+            this.Hide();
         }
     }
 }

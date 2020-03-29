@@ -28,7 +28,7 @@ namespace Марафон
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form1 Main = new Form1();
+            Main Main = new Main();
             Main.Show();
             this.Hide();
 
@@ -36,7 +36,7 @@ namespace Марафон
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form1 Main = new Form1();
+            Main Main = new Main();
             Main.Show();
             this.Hide();
 

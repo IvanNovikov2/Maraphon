@@ -22,7 +22,7 @@ namespace Марафон
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 Main = new Form1();
+            Main Main = new Main();
             Main.Show();
             this.Hide();
 
@@ -40,9 +40,70 @@ namespace Марафон
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 Main = new Form1();
+            Main Main = new Main();
             Main.Show();
             this.Hide();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int login = 0;
+            string role = "";
+            using (SqlConnection conn = new
+            SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString))
+            {
+                conn.Open();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT Count(*) FROM [User] WHERE Email='" + textBox1.Text + "'AND Password = '" + textBox2.Text + "'";
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    login = Convert.ToInt32(reader[0]);
+                }
+                conn.Close();
+                conn.Open();
+                SqlCommand cmd1 = conn.CreateCommand();
+                cmd1.CommandText = "SELECT RoleId FROM [User] WHERE Email='" + textBox1.Text + "'AND Password = '" + textBox2.Text + "'";
+                SqlDataReader reader1 = cmd1.ExecuteReader();
+                while (reader1.Read())
+                {
+                    role = reader1[0].ToString();
+                }
+                conn.Close();
+            }
+            if (login == 1)
+            {
+                File.WriteAllText("Resources/login.txt", textBox1.Text);
+                if (role == "R")
+                {
+                    Runner Runner = new Runner();
+                    Runner.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    if (role == "A")
+                    {
+                        Administrator Admin = new Administrator();
+                        Admin.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        if (role == "C")
+                        {
+                            Coordinator Coordinator = new Coordinator();
+                            Coordinator.Show();
+                            this.Hide();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не правильный логин/пароль.");
+            }
 
         }
     }

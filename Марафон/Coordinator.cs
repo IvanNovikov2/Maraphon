@@ -16,5 +16,30 @@ namespace Марафон
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan time1;
+            DateTime initial_time = Convert.ToDateTime("04.10.2050  6:00");
+            DateTime current_time = DateTime.Now;
+            time1 = initial_time - current_time;
+            time.Text = time1.Days.ToString() + " дней " + time1.Hours.ToString() + " часов и " + time1.Minutes.ToString() + " минут до старта марафона!";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Main Main = new Main();
+            Main.Show();
+            this.Hide();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Main Main = new Main();
+            Main.Show();
+            this.Hide();
+
+        }
     }
 }
