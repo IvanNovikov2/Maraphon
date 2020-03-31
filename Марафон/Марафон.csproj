@@ -52,6 +52,12 @@
     <Compile Include="Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckRunner.Designer.cs">
+      <DependentUpon>CheckRunner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coordinator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +95,17 @@
     <Compile Include="Runner.Designer.cs">
       <DependentUpon>Runner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sponsor.Designer.cs">
+      <DependentUpon>Sponsor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckRunner.resx">
+      <DependentUpon>CheckRunner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
@@ -115,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="Runner.resx">
       <DependentUpon>Runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sponsor.resx">
+      <DependentUpon>Sponsor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MaraphonDataSet.xsc">
       <DependentUpon>MaraphonDataSet.xsd</DependentUpon>
