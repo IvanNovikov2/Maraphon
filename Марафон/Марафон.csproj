@@ -64,6 +64,12 @@
     <Compile Include="Coordinator.Designer.cs">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtrlR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtrlR.Designer.cs">
+      <DependentUpon>CtrlR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlR.resx">
+      <DependentUpon>CtrlR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
